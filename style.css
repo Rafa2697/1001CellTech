@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+	
+}
+
+:root{
+    --ff-verde-logo: #C4DFE6;
+    --ff-verde-escuro: #003B46;
+    --ff-preto-musgo:#282828;
+}
+
+a, a:hover, a:active, a:link, a:visited{
+    text-decoration: none;
+    
+}
+
+header{
+    background-color:var(--ff-verde-escuro);
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo-header{
+    width: 110px;
+    margin: 5px;
+  
+}
+
+nav .nav_list{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.nav_list > li{
+    list-style: none;
+    
+
+}
+.nav_list a{
+    color: var(--ff-verde-logo);
+}
