@@ -46,5 +46,14 @@ nav .nav_list{
 
 }
 .nav_list a{
-    color: var(--ff-verde-logo);
+    color: white;
+}
+.nav_list li{
+   padding: 20px;
+   transition: 0.5s;
+   transition-timing-function: ease-out;
+
+}
+.nav_list li:hover{
+    background-color: rgba(165, 42, 42, 0.678);
 }
