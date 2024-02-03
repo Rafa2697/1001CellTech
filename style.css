@@ -6,13 +6,21 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-	
 }
 
+
+/* essas cores foram tiradas do gpt-4 com base nas cores da logo, pode ser atualizadas.  */
 :root{
-    --ff-verde-logo: #C4DFE6;
-    --ff-verde-escuro: #003B46;
-    --ff-preto-musgo:#282828;
+    --carvao:#333333;
+    --cinzaEscuro:#666666;
+    --grafite:#4B4B4B;
+    --dourado:#FFD700;
+    --ouroVelho: #CFB53B;
+    --ouroRosa: #B76E79;
+    --bronze: #CD7F32;
+    --ouroMetalico: #D7B456;
+    --amareloArylide: #E8CC5D;
+
 }
 
 a, a:hover, a:active, a:link, a:visited{
@@ -21,23 +29,36 @@ a, a:hover, a:active, a:link, a:visited{
 }
 
 header{
-    background-color:var(--ff-verde-escuro);
+    background-image: linear-gradient( to right, var(--carvao), var(--grafite));
     width: 100%;
     height: 20vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: fixed;
 }
 .logo-header{
     width: 110px;
     margin: 5px;
-  
+    animation: logo-animate 2s ease-in ;
+}
+
+@keyframes logo-animate{
+    from{
+        opacity: 0;
+        filter: blur(15px);
+    }
+    to{
+        opacity: 1;
+        filter: blur(0);
+    }
 }
 
 nav .nav_list{
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+    animation: logo-animate 2s ease-in ;
 }
 
 .nav_list > li{
@@ -50,10 +71,41 @@ nav .nav_list{
 }
 .nav_list li{
    padding: 20px;
-   transition: 0.5s;
-   transition-timing-function: ease-out;
+   transition: 0.6s;
+   transition-timing-function: ease-in-out;
 
 }
 .nav_list li:hover{
-    background-color: rgba(165, 42, 42, 0.678);
+    background-color: var(--ouroVelho);
+    border-radius: 4px;
+}
+
+/* section home */
+
+.container-flex{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+
+.home h1{
+    color: var(--amareloArylide);
+}
+.home p{
+    color: var(--grafite);
+}
+
+
+
+
+
+
+
+
+footer{
+    width: 100%;
+    color: var(--bronze);
+    text-align: center;
 }
