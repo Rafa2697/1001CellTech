@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1001CellTech</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>1001CellTech</title>
+	<link rel="stylesheet" href="style.css">
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
 </head>
+
 <body>
-    <header>
-        <div class="menu">
-            <img class="logo-header" src="images/logo-1001CellTech.png" alt="logo">
-        </div><!--menu-->
-        <nav class="nav active" >
-            <ul class="nav_list">
-                <li><a class="nav_link" href="#about">Sobre</a></li>
-                <li><a href="#services" class="nav_link">Serviços</a></li>
-                <li><a href="#contact" class="nav_link">contato</a></li>
-            </ul><!--nav_list-->
-        </nav><!--nav active-->
-    </header>
-    <main data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-        <section class="home container-flex" id="home">
-            <div>
-                <h1>1001CellTech</h1>
-                <p>Assistência Técnica & Acessórios</p>
-            </div>
-        </section><!--home-->
-        <section class="about container-flex" id="about">
-            <h1>sobre</h1>
-        </section><!--about-->
-        <section class="services container-flex" id="services">
-            <h1>Serviços</h1>
-        </section><!--services-->
-        <section class="contact container-flex" id="contact">
-            <h1>contato</h1>
-        </section><!--contact-->
-    </main>
+	<section class="titlescreen">
+		<div id="gradient"></div>
+		<img class="logo" src="images/logoBW.png" alt="logo">
+		<!-- <h1 id="logo-text">1001<span>CellTech</span></h1> -->
+		<img class="logo-name" src="images/logonameBW.png" alt="logo">
+	</section>
 
-    <footer>
-        <div>
-            <p style="display: inline-block; text-align: center;">&copy;Rafael Mattos</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<main>
+		<section class="cards">
+			<div class="card-row">
+				<div class="card first">
+					<h1>Reparos</h1>
+					<img src="images/brokenphone.png" alt="broken phone">
+				</div>
+				<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel neque nec nulla feugiat laoreet. Cras sed lacus sed metus dignissim euismod quis vitae dui.</h1>
+			</div>
+			<div class="card-row inverted">
+				<div class="card second">
+					<h1>Compra Venda</h1>
+					<img src="images/phonebox.png" alt="broken phone">
+				</div>
+				<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel neque nec nulla feugiat laoreet. Cras sed lacus sed metus dignissim euismod quis vitae dui.</h1>
+			</div>
+			<div class="card-row">
+				<div class="card third">
+					<h1>Acessorios</h1>
+					<img src="images/charger.png" alt="broken phone">
+				</div>
+				<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel neque nec nulla feugiat laoreet. Cras sed lacus sed metus dignissim euismod quis vitae dui.</h1>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div>
+			<p style="display: inline-block; text-align: center;">&copy;Rafael Mattos</p>
+		</div>
+	</footer>
 </body>
+
 </html>
