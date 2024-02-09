@@ -87,8 +87,15 @@ nav .nav_list{
     justify-content: center;
     height: 100vh;
     align-items: center;
+    flex-direction: column;
+}
+.logo-header{
+    width: 200px;
 }
 
+.home{
+    animation: logo-animate 2s ease-in
+}
 
 .home h1{
     color: var(--amareloArylide);
@@ -97,7 +104,13 @@ nav .nav_list{
     color: var(--grafite);
 }
 
-
+.container-wrap{
+    display: flex;
+    justify-content:center ;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
 
 
 
