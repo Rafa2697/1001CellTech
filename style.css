@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
-*,
-*::before,
-*::after {
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -30,12 +28,12 @@ a, a:hover, a:active, a:link, a:visited{
 
 header{
     /* background-image: linear-gradient( to right, var(--carvao), var(--grafite)); */
-    width: 100%;
+    width: 10%;
     height: 20vh;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: start;
     position: fixed;
+    padding: 10px;
 }
 .logo-header{
     width: 110px;
@@ -56,6 +54,8 @@ header{
 
 nav .nav_list{
     display: flex;
+    flex-direction: column;
+    text-align: center;
     gap: 30px;
     flex-wrap: wrap;
     animation: logo-animate 2s ease-in ;
@@ -85,7 +85,7 @@ nav .nav_list{
 .container-flex{
     display: flex;
     justify-content: center;
-    height: 100vh;
+    
     align-items: center;
     flex-direction: column;
 }
@@ -110,9 +110,107 @@ nav .nav_list{
     flex-direction: column;
     align-items: center;
     width: 60%;
+    height: 100vh;
 }
 
 
+
+/* serviços */
+
+.reparos-assistencia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+}
+
+.compra-venda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+}
+.acessorios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+}
+
+.acessorios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.img{
+    width: 50%;
+    margin: 10px;
+    
+}
+.img-wraper{
+    background-color: black;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 25px;
+    overflow: hidden;
+    aspect-ratio: auto 400 / 500;
+}
+
+.img-wraper > h2{
+    padding: 0 10px;
+    color: white;
+}
+.img-wraper:hover{
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
+	transition: all .3s cubic-bezier(0, 0, .5, 1);
+	transform: scale3d(1.01, 1.01, 1.01);
+}
+.image-left{
+    object-fit: fill;
+    position: relative;
+    left: 10%;
+    top: 30%;  
+}
+.image-right{
+    object-fit: fill;
+    position: relative;
+    left: 50%;
+    top: -10%; 
+    width: 110%;
+}
+
+.animate{
+    transform: translate(-20%, -20%);
+    transition: 4s;
+}
+.animate2{
+    transform: translate(-40%);
+    transition: 4s;
+}
+
+.img-right{
+    background-color: aliceblue;
+    
+}
+.img-right > h2{
+    color: black;
+}
+
+
+.information{
+    width: 50%;
+    margin: 10px;
+}
 
 
 
