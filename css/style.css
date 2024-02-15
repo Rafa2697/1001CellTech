@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/* cores podem ser modificadas.  */
+:root {
+	--carvao: #333333;
+	--cinzaEscuro: #666666;
+	--grafite: #4B4B4B;
+	--dourado: #FFD700;
+	--ouroVelho: #CFB53B;
+	--ouroRosa: #B76E79;
+	--bronze: #CD7F32;
+	--ouroMetalico: #D7B456;
+	--amareloArylide: #E8CC5D;
+}
+
+@keyframes gradient {
+	0% {
+		top: 0%;
+	}
+
+	50% {
+		top: -25%;
+	}
+
+	100% {
+		top: 0%;
+	}
+}
+
+@keyframes logo-animate {
+	from {
+		opacity: 0;
+		filter: blur(15px);
+	}
+
+	to {
+		opacity: 1;
+		filter: blur(0);
+	}
+}
+
+
+body {
+	background-color: #f5f5f7;
+	overflow-x: hidden;
+}
+
+
+a,
+a:hover,
+a:active,
+a:link,
+a:visited {
+	text-decoration: none;
+}
+
+main {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.info {
+	position: relative;
+}
+
+.rogger-toggle-wrapper {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding-top: 5vw;
+	padding-bottom: 5vw;
+}
+
+.roger-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 35vw;
+	aspect-ratio: auto 8/1;
+	overflow: hidden;
+	border-radius: 18px;
+	background-color: black;
+	box-shadow: 2px 4px 12px rgba(0, 0, 0, .16);
+	transition: all .1s cubic-bezier(0, 0, .5, 1);
+}
+
+.roger-toggle p {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.roger-toggle:hover {
+	box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
+	transition: all .3s cubic-bezier(0, 0, .5, 1);
+	transform: scale3d(1.01, 1.01, 1.01);
+	cursor: pointer;
+}
+
+.roger-toggle:active {
+	transform: scale3d(0.99, 0.99, 0.99);
+}
+
+.roger-wrapping {
+	box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
+	position: absolute;
+	bottom: 0;
+	right: -3%;
+	aspect-ratio: 405 / 442;
+	height: 40vh;
+	/* background-color: black; */
+}
+
+.roger-wrapping img {
+	aspect-ratio: 405 / 442;
+	height: 40vh;
+}
+
+.roger-wrapping[aria-hidden="true"] {
+	transform-origin: right top;
+	transform: rotate(-90deg);
+	transition: 500ms;
+}
+
+.roger-wrapping:not([aria-hidden]),
+.roger-wrapping[aria-hidden="false"] {
+	transform-origin: right top;
+	transition: 1s;
+	transform: rotate(20deg);
+}
+
+footer {
+	width: 100%;
+	text-align: center;
+}
+
+footer a {
+	color: var(--bronze);
+}
