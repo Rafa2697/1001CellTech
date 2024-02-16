@@ -9,7 +9,6 @@
 	height: 100vh;
 	background: linear-gradient(#6f6f6f 0%, rgba(255, 255, 255, 0) 100%);
 	animation: gradient 5s ease infinite;
-	z-index: -1;
 }
 
 .logo {

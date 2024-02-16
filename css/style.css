@@ -8,6 +8,10 @@
 	margin: 0;
 }
 
+html {
+	overflow-x: hidden;
+}
+
 /* cores podem ser modificadas.  */
 :root {
 	--carvao: #333333;
@@ -85,7 +89,6 @@ main {
 	justify-content: center;
 	width: 35vw;
 	aspect-ratio: auto 8/1;
-	overflow: hidden;
 	border-radius: 18px;
 	background-color: black;
 	box-shadow: 2px 4px 12px rgba(0, 0, 0, .16);
@@ -114,7 +117,7 @@ main {
 	box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
 	position: absolute;
 	bottom: 0;
-	right: -3%;
+	right: 0;
 	aspect-ratio: 405 / 442;
 	height: 40vh;
 	/* background-color: black; */

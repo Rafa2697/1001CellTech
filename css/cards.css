@@ -1,18 +1,18 @@
 /* div com todos os cards */
 .cards {
   display: flex;
-	flex-direction: column;
-	gap: 20px;
-	font-family: Helvetica;
-	word-wrap: break-word;
+  flex-direction: column;
+  gap: 20px;
+  font-family: Helvetica;
+  word-wrap: break-word;
 }
 
 /* div com as linhas de cada card */
 .card-row {
   display: flex;
-	width: 100%;
-	justify-content: space-between;
-	align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card-row h1 {
@@ -27,220 +27,217 @@
 /* cada card */
 .card {
   display: flex;
-	aspect-ratio: auto 400/500;
-	width: 25vw;
-	overflow: hidden;
-	border-radius: 18px;
-	background-color: white;
-	box-shadow: 2px 4px 12px rgba(0, 0, 0, .16);
-	transition: all .3s cubic-bezier(0, 0, .5, 1);
-}
-
-.card img {
+  aspect-ratio: auto 400/500;
+  width: 25vw;
+  overflow: hidden;
+  border-radius: 18px;
+  background-color: white;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, .16);
   transition: all .3s cubic-bezier(0, 0, .5, 1);
 }
 
-/* primeiro card */
-.first h1 {
+.card h1 {
   position: relative;
-	top: 5%;
-	left: 5%;
-	color: white;
-	z-index: 1;
+  top: 5%;
+  left: 5%;
+  z-index: 1;
+  text-wrap: nowrap;
+}
+
+.card img {
+  position: relative;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  object-fit: fill;
+  transition: all .3s cubic-bezier(0, 0, .5, 1);
+}
+
+.first,
+.third h1 {
+  color: white;
 }
 
 .first img {
-	object-fit: fill;
-	position: relative;
-	left: 50%;
-	top: 70%;
-	transform: translate(-50%, -50%);
-	height: 100%;
-}
-
-/* segundo card */
-.second {
-	justify-self: flex-end;
-}
-
-.second h1 {
-	position: relative;
-	top: 5%;
-	left: 5%;
-	z-index: 1;
+  left: 40%;
+  top: 70%;
 }
 
 .second img {
-	object-fit: fill;
-	position: fixed;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	position: relative;
-	height: 100%;
-}
-
-/* terceiro card */
-
-.third h1 {
-  position: relative;
-	top: 5%;
-	left: 5%;
-	color: white;
-	z-index: 1;
+  left: 30%;
+  top: 50%;
 }
 
 .third img {
-  object-fit: fill;
-	position: fixed;
-	left: -20%;
-	top: 70%;
-	transform: translate(-50%, -50%);
-	position: relative;
-	height: 100%;
+  left: -20%;
+  top: 70%;
 }
 
 /* efeitos primeiro card */
 
-#first[aria-hidden="true"] {
-	.card {
-		background-color: black;
-    transform: translate(10vw);
-	}
-  #text {
-    visibility: hidden;
-    opacity: 0;
-    transform: translate(-10vw);
-    transition: all .3s cubic-bezier(0, 0, .5, 1), visibility 0.3s, opacity 0.3s  cubic-bezier(0, 0, .5, 1);
+@media screen and (min-width: 601px) {
+  #first[aria-hidden="true"] {
+    .card {
+      background-color: black;
+      transform: translate(10vw);
+    }
+
+    #text {
+      visibility: hidden;
+      opacity: 0;
+      transform: translate(-10vw);
+      transition: all .3s cubic-bezier(0, 0, .5, 1), visibility 0.3s, opacity 0.3s cubic-bezier(0, 0, .5, 1);
+    }
+
+    .card:hover {
+      box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
+      transform: translate(10vw) scale3d(1.01, 1.01, 1.01);
+      transition: all .3s cubic-bezier(0, 0, .5, 1);
+      cursor: pointer;
+    }
+
+    .card:hover img {
+      transform: translate(-60%, -60%);
+      transition: all .3s cubic-bezier(0, 0, .5, 1);
+    }
   }
-  .card:hover {
-    box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
-    transform: translate(10vw) scale3d(1.01, 1.01, 1.01);
-    transition: all .3s cubic-bezier(0, 0, .5, 1);
-    cursor: pointer;
+
+  #first:not([aria-hidden]),
+  #first[aria-hidden="false"] {
+    .card {
+      background-color: black;
+      transform: translate(0vw);
+    }
+
+    #text {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0px);
+      transition: all .3s cubic-bezier(0, 0, .5, 1), visibility 0.3s, opacity 0.3s cubic-bezier(0, 0, .5, 1);
+    }
+
+    .card:hover {
+      box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
+      transition: all .3s cubic-bezier(0, 0, .5, 1);
+      transform: translate(0vw) scale3d(1.01, 1.01, 1.01);
+      cursor: pointer;
+    }
+
+    .card:hover img {
+      transition: all .3s cubic-bezier(0, 0, .5, 1);
+      transform: translate(-60%, -60%);
+    }
   }
-  .card:hover img {
-    transform: translate(-60%, -60%);
-    transition: all .3s cubic-bezier(0, 0, .5, 1);
+
+  /* efeitos segundo card */
+  #second[aria-hidden="true"] {
+    .card {
+      background-color: white;
+      transform: translate(-10vw);
+    }
+
+    #text {
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(10vw);
+      transition: all .3s cubic-bezier(0, 0, .5, 1), visibility 0.3s, opacity 0.3s cubic-bezier(0, 0, .5, 1);
+    }
+
+    .card:hover {
+      box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
+      transition: all .3s cubic-bezier(0, 0, .5, 1);
+      transform: translate(-10vw) scale3d(1.01, 1.01, 1.01);
+      cursor: pointer;
+    }
+
+    .card:hover img {
+      transition: all .3s cubic-bezier(0, 0, .5, 1);
+      transform: translate(-60%, -50%);
+    }
+  }
+
+  #second:not([aria-hidden]),
+  #second[aria-hidden="false"] {
+    .card {
+      background-color: white;
+      transform: translate(0vw);
+    }
+
+    #text {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0vw);
+      transition: all .3s cubic-bezier(0, 0, .5, 1), visibility 0.3s, opacity 0.3s cubic-bezier(0, 0, .5, 1);
+    }
+
+    .card:hover {
+      box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
+      transition: all .3s cubic-bezier(0, 0, .5, 1);
+      transform: translate(0vw) scale3d(1.01, 1.01, 1.01);
+      cursor: pointer;
+    }
+
+    .card:hover img {
+      transition: all .3s cubic-bezier(0, 0, .5, 1);
+      transform: translate(-60%, -50%);
+    }
+  }
+
+  /* efeitos terceiro card */
+
+  #third[aria-hidden="true"] {
+    .card {
+      background-color: black;
+      transform: translate(10vw);
+    }
+
+    #text {
+      visibility: hidden;
+      opacity: 0;
+      transform: translate(-10vw);
+      transition: all .3s cubic-bezier(0, 0, .5, 1), visibility 0.3s, opacity 0.3s cubic-bezier(0, 0, .5, 1);
+    }
+
+    .card:hover {
+      box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
+      transform: translate(10vw) scale3d(1.01, 1.01, 1.01);
+      transition: all .3s cubic-bezier(0, 0, .5, 1);
+      cursor: pointer;
+    }
+
+    .card:hover img {
+      transition: all .3s cubic-bezier(0, 0, .5, 1);
+      transform: translate(-40%, -60%);
+    }
+  }
+
+  #third:not([aria-hidden]),
+  #third[aria-hidden="false"] {
+    .card {
+      background-color: black;
+      transform: translate(0vw);
+    }
+
+    #text {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0px);
+      transition: all .3s cubic-bezier(0, 0, .5, 1), visibility 0.3s, opacity 0.3s cubic-bezier(0, 0, .5, 1);
+    }
+
+    .card:hover {
+      box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
+      transition: all .3s cubic-bezier(0, 0, .5, 1);
+      transform: translate(0vw) scale3d(1.01, 1.01, 1.01);
+      cursor: pointer;
+    }
+
+    .card:hover img {
+      transition: all .3s cubic-bezier(0, 0, .5, 1);
+      transform: translate(-40%, -60%);
+    }
   }
 }
 
-#first:not([aria-hidden]),
-#first[aria-hidden="false"] {
-  .card {
-    background-color: black;
-		transform: translate(0vw);
-	}
-	#text {
-    opacity: 1;
-    visibility: visible;
-		transform: translate(0px);
-    transition: all .3s cubic-bezier(0, 0, .5, 1), visibility 0.3s, opacity 0.3s  cubic-bezier(0, 0, .5, 1);
-	}
-  .card:hover {
-    box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
-    transition: all .3s cubic-bezier(0, 0, .5, 1);
-    transform: translate(0vw) scale3d(1.01, 1.01, 1.01);
-    cursor: pointer;
-  }
-  .card:hover img {
-    transition: all .3s cubic-bezier(0, 0, .5, 1);
-    transform: translate(-60%, -60%);
-  }
-}
+@media screen and (max-width: 600px) {
 
-/* efeitos segundo card */
-#second[aria-hidden="true"] {
-	.card {
-		background-color: white;
-		transform: translate(-10vw);
-	}
-	#text {
-    opacity: 0;
-    visibility: hidden;
-		transform: translate(10vw);
-    transition: all .3s cubic-bezier(0, 0, .5, 1), visibility 0.3s, opacity 0.3s  cubic-bezier(0, 0, .5, 1);
-	}
-  .card:hover {
-    box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
-    transition: all .3s cubic-bezier(0, 0, .5, 1);
-    transform: translate(-10vw) scale3d(1.01, 1.01, 1.01);
-    cursor: pointer;
-  }
-  .card:hover img {
-    transition: all .3s cubic-bezier(0, 0, .5, 1);
-    transform: translate(-60%, -50%);
-  }
-}
-
-#second:not([aria-hidden]),
-#second[aria-hidden="false"] {
-	.card {
-		background-color: white;
-		transform: translate(0vw);	}
-	#text {
-    opacity: 1;
-    visibility: visible;
-		transform: translate(0vw);
-    transition: all .3s cubic-bezier(0, 0, .5, 1), visibility 0.3s, opacity 0.3s  cubic-bezier(0, 0, .5, 1);
-	}
-  .card:hover {
-    box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
-    transition: all .3s cubic-bezier(0, 0, .5, 1);
-    transform: translate(0vw) scale3d(1.01, 1.01, 1.01);
-    cursor: pointer;
-  }
-  .card:hover img {
-    transition: all .3s cubic-bezier(0, 0, .5, 1);
-    transform: translate(-60%, -50%);
-  }
-}
-
-/* efeitos terceiro card */
-
-#third[aria-hidden="true"] {
-	.card {
-		background-color: black;
-    transform: translate(10vw);
-	}
-  #text {
-    visibility: hidden;
-    opacity: 0;
-    transform: translate(-10vw);
-    transition: all .3s cubic-bezier(0, 0, .5, 1), visibility 0.3s, opacity 0.3s  cubic-bezier(0, 0, .5, 1);
-  }
-  .card:hover {
-    box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
-    transform: translate(10vw) scale3d(1.01, 1.01, 1.01);
-    transition: all .3s cubic-bezier(0, 0, .5, 1);
-    cursor: pointer;
-  }
-  .card:hover img {
-    transition: all .3s cubic-bezier(0, 0, .5, 1);
-    transform: translate(-40%, -60%);
-  }
-}
-
-#third:not([aria-hidden]),
-#third[aria-hidden="false"] {
-  .card {
-    background-color: black;
-		transform: translate(0vw);
-	}
-	#text {
-    opacity: 1;
-    visibility: visible;
-		transform: translate(0px);
-    transition: all .3s cubic-bezier(0, 0, .5, 1), visibility 0.3s, opacity 0.3s  cubic-bezier(0, 0, .5, 1);
-	}
-  .card:hover {
-    box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
-    transition: all .3s cubic-bezier(0, 0, .5, 1);
-    transform: translate(0vw) scale3d(1.01, 1.01, 1.01);
-    cursor: pointer;
-  }
-  .card:hover img {
-    transition: all .3s cubic-bezier(0, 0, .5, 1);
-    transform: translate(-40%, -60%);
-  }
 }
