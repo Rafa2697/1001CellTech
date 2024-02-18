@@ -85,7 +85,6 @@ nav .nav_list{
 .container-flex{
     display: flex;
     justify-content: center;
-    
     align-items: center;
     flex-direction: column;
 }
@@ -111,6 +110,7 @@ nav .nav_list{
     align-items: center;
     width: 60%;
     height: 100vh;
+    text-align: justify;
 }
 
 
@@ -191,11 +191,12 @@ nav .nav_list{
 
 .animate{
     transform: translate(-20%, -20%);
-    transition: 4s;
+    transition: all .3s cubic-bezier(0, 0, .5, 1);
+    
 }
 .animate2{
     transform: translate(-40%);
-    transition: 4s;
+    transition: all .5s cubic-bezier(0, 0, .5, 1);
 }
 
 .img-right{
@@ -209,14 +210,141 @@ nav .nav_list{
 
 .information{
     width: 50%;
-    margin: 10px;
+    margin-top: 15px;
+    text-align: justify;
+
 }
 
+.contact-wrap{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 10px;
 
+}
+.maps {
+    width: 50%;
+}
 
+iframe{
+    border-radius: 12px;
+    width: 100%;
+}
+.social-midia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    
+}
+.bi-messenger{
+    font-size: 2.5rem;
+}
+.bi-messenger span{
+    font-size: 1.5rem;
+    
+}
+
+.bi-whatsapp{
+    color: green;
+    font-size: 2.5rem;
+}
+.bi-whatsapp:hover{
+    color: rgb(4, 184, 4);
+}
+.bi-whatsapp span{
+    font-size: 1.5rem;
+}
 
 footer{
     width: 100%;
     color: var(--bronze);
     text-align: center;
+}
+
+
+/* responsividade */
+
+@media screen and (max-width: 767px) {
+        header {
+            display: none;   
+        }
+        .home{
+            height: 100vh;
+        }
+        .reparos-assistencia{
+            display: flex;
+            flex-direction: column;
+            
+            width: 100%;
+            height: auto;
+            padding: 50px;
+            margin: 0 auto;
+        }
+        .compra-venda{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            padding: 50px;
+        }
+        .acessorios{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+        }
+        .img{
+            width: 90%;
+        }
+
+        .img-wraper{
+            margin: 0 auto;
+            width: 100%;
+            height: 300px;
+        }
+        .image-right{
+            object-fit: fill;
+            position: relative;
+            left: 50%;
+            top: 8%; 
+            width: 100%;
+        }
+        .image-left{
+            object-fit: fill;
+            position: relative;
+            left: 20%;
+            top: 30%;  
+            width: 120%;
+        }
+        .information{
+            width: 100%;
+            margin: 10px;
+        }
+        .contact-wrap{
+            flex-direction: column-reverse;
+            justify-content: center;
+            width: 100%;
+        }
+        .maps {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        iframe{
+            border-radius: 12px;
+            width: 80%;
+        }
+        .social-midia{
+            display: flex;
+            width: 80%;
+            justify-content: center;
+           margin: 20px auto;
+            
+        }
+
 }
