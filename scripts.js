@@ -26,6 +26,3 @@ elementsRight.forEach((element) => myObserver2.observe(element))
 
 // efeito do botão nav
 
-const botao = document.querySelector('.nav').addEventListener('click', () => {
-    console.log('clicado')
-})
