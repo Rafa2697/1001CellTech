@@ -22,3 +22,10 @@ const elementsRight = document.querySelectorAll('.image2')
 
 elements.forEach((element) => myObserver.observe(element))
 elementsRight.forEach((element) => myObserver2.observe(element))
+
+
+// efeito do botão nav
+
+const botao = document.querySelector('.nav').addEventListener('click', () => {
+    console.log('clicado')
+})

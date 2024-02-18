@@ -27,7 +27,7 @@ a, a:hover, a:active, a:link, a:visited{
 }
 
 header{
-    /* background-image: linear-gradient( to right, var(--carvao), var(--grafite)); */
+   
     width: 10%;
     height: 20vh;
     display: flex;
@@ -63,7 +63,7 @@ nav .nav_list{
 
 .nav_list > li{
     list-style: none;
-    
+    display: none;
 
 }
 .nav_list a{
@@ -78,6 +78,7 @@ nav .nav_list{
 .nav_list li:hover{
     background-color: var(--ouroVelho);
     border-radius: 4px;
+    filter: blur(1px);
 }
 
 /* section home */
@@ -87,13 +88,16 @@ nav .nav_list{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+   
 }
 .logo-header{
     width: 200px;
 }
 
 .home{
-    animation: logo-animate 2s ease-in
+    background-image: linear-gradient(to bottom,var(--cinzaEscuro), white);
+    animation: logo-animate 2s ease-in;
+    height: 100vh;
 }
 
 .home h1{
@@ -180,6 +184,7 @@ nav .nav_list{
     position: relative;
     left: 10%;
     top: 30%;  
+    filter: blur(1px);
 }
 .image-right{
     object-fit: fill;
@@ -187,16 +192,18 @@ nav .nav_list{
     left: 50%;
     top: -10%; 
     width: 110%;
+    filter: blur(1px);
 }
 
 .animate{
     transform: translate(-20%, -20%);
-    transition: all .3s cubic-bezier(0, 0, .5, 1);
-    
+    transition: 1s ease-in-out;
+    filter: blur(0px);
 }
 .animate2{
     transform: translate(-40%);
     transition: all .5s cubic-bezier(0, 0, .5, 1);
+    filter: blur(0px);
 }
 
 .img-right{
@@ -260,6 +267,8 @@ footer{
     width: 100%;
     color: var(--bronze);
     text-align: center;
+    background-image: linear-gradient(to top,var(--cinzaEscuro), white);
+    
 }
 
 
