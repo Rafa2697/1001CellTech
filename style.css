@@ -187,9 +187,15 @@ nav .nav_list{
     padding: 0 10px;
     color: white;
 }
-.img-wraper:hover{
+/* .img-wraper:hover{
     box-shadow: 2px 4px 16px rgba(0, 0, 0, .32);
 	transition: all .3s cubic-bezier(0, 0, .5, 1);
+	transform: scale3d(1.01, 1.01, 1.01);
+} */
+
+.animate-div{
+    box-shadow: 10px 8px 36px black;
+	transition: 1s ease-in-out;
 	transform: scale3d(1.01, 1.01, 1.01);
 }
 .image-left{
@@ -208,15 +214,23 @@ nav .nav_list{
     filter: blur(1px);
 }
 
+/* animações */
 .animate{
     transform: translate(-20%, -20%);
-    transition: 1s ease-in-out;
+    transition: 1.5s ease-in-out;
     filter: blur(0px);
 }
 .animate2{
     transform: translate(-40%);
-    transition: all .5s cubic-bezier(0, 0, .5, 1);
+    transition: 1.5s ease-in-out;
     filter: blur(0px);
+}
+
+.animate-div{
+    /* box-shadow: 2px 4px 16px rgba(0, 0, 0, .32); */
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+	transition: 1s ease-in-out;
+	transform: scale3d(1.01, 1.01, 1.01);
 }
 
 .img-right{
